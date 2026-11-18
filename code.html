@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+
+<html lang="ko"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Noto+Serif:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "primary-container": "#c59b27", "on-primary": "#ffffff", "on-error": "#ffffff", "on-primary-fixed": "#251a00", "surface-container-high": "#e4e8f2", "error-container": "#ffdad6", "error": "#ba1a1a", "on-secondary-fixed": "#101f09", "on-surface": "#171c23", "on-secondary-container": "#586a4c", "on-secondary-fixed-variant": "#3b4b30", "surface": "#f8f9ff", "outline": "#807663", "secondary-fixed": "#d5e9c4", "secondary-container": "#d5e9c4", "on-secondary": "#ffffff", "tertiary-container": "#ec846c", "on-tertiary": "#ffffff", "outline-variant": "#d1c5af", "surface-container-lowest": "#ffffff", "on-error-container": "#93000a", "surface-dim": "#d6dae4", "primary-fixed": "#ffdf98", "on-tertiary-container": "#671f0e", "tertiary-fixed-dim": "#ffb4a3", "on-tertiary-fixed": "#3d0600", "inverse-primary": "#eec14b", "surface-bright": "#f8f9ff", "surface-container-highest": "#dee2ec", "inverse-surface": "#2c3138", "secondary-fixed-dim": "#b9cda9", "on-primary-fixed-variant": "#5a4300", "on-background": "#171c23", "primary-fixed-dim": "#eec14b", "tertiary": "#9a4430", "inverse-on-surface": "#edf1fb", "tertiary-fixed": "#ffdad2", "background": "#f8f9ff", "on-tertiary-fixed-variant": "#7b2e1c", "secondary": "#526347", "on-primary-container": "#473500", "surface-variant": "#dee2ec", "surface-container-low": "#f0f4fd", "surface-tint": "#775a00", "on-surface-variant": "#4e4635", "surface-container": "#eaeef8", "primary": "#775a00" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "gutter": "1rem", "space-md": "1rem", "margin": "1.25rem", "space-xl": "2.5rem", "margin-tablet": "2.5rem", "space-xs": "0.25rem", "space-sm": "0.5rem", "space-lg": "1.5rem", "gutter-tablet": "1.5rem" }, "fontFamily": { "label-md": ["Inter"], "body-sm": ["Inter"], "label-lg": ["Inter"], "body-lg": ["Inter"], "headline-lg": ["Noto Serif"], "label-theological-numeral": ["Noto Serif"], "scripture-quote": ["Noto Serif"], "headline-md": ["Noto Serif"], "display-lg-mobile": ["Noto Serif"], "body-md": ["Inter"], "display-lg": ["Noto Serif"], "headline-sm": ["Noto Serif"] }, "fontSize": { "label-md": ["11px", { "lineHeight": "16px", "letterSpacing": "0.08em", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "18px", "fontWeight": "400" }], "label-lg": ["13px", { "lineHeight": "18px", "letterSpacing": "0.06em", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "28px", "fontWeight": "400" }], "headline-lg": ["28px", { "lineHeight": "38px", "letterSpacing": "-0.01em", "fontWeight": "500" }], "label-theological-numeral": ["14px", { "lineHeight": "18px", "letterSpacing": "0.15em", "fontWeight": "700" }], "scripture-quote": ["17px", { "lineHeight": "30px", "letterSpacing": "0.01em", "fontWeight": "400" }], "headline-md": ["22px", { "lineHeight": "32px", "fontWeight": "500" }], "display-lg-mobile": ["32px", { "lineHeight": "42px", "letterSpacing": "-0.01em", "fontWeight": "400" }], "body-md": ["14px", { "lineHeight": "24px", "fontWeight": "400" }], "display-lg": ["40px", { "lineHeight": "52px", "letterSpacing": "-0.02em", "fontWeight": "400" }], "headline-sm": ["18px", { "lineHeight": "26px", "fontWeight": "600" }] } } } };</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head><body class="bg-surface font-body-md text-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.03)]"><div class="h-16 px-margin flex items-center justify-between"><div class="flex items-center gap-space-sm min-w-0"><img alt="Ordo Salutis Emblem" class="h-8 w-auto object-contain flex-shrink-0" src="https://lh3.googleusercontent.com/aida/ALJJyrD7kiOlMEbOp8mqm2c_WP6OZZ8ZN5hhNeptFAblnj7xOycKa828Az87c3-Ujn_IRWb2Qcg64O_FxrB9Dw5T498bdKbiSKJ7ui-qnFV5C-_MtN-coYQbfdeBdokTpNELznsNad5-vr0Iev7fnYYeF_YsDUWOaZxS-o1N31XB1p2Bkeb7Wvx9Tq8g7zVj2nHGNHJ3TR0cokcuDRxNHJCzDMtT7oyqcABJccvFa7UQQI4tZg"/><div class="flex flex-col min-w-0"><span class="font-headline-sm text-headline-sm text-on-surface truncate tracking-tight">구원의 서정 (Ordo Salutis)</span><span class="font-label-md text-label-md text-primary tracking-widest uppercase truncate">여정 타임라인</span></div></div><div class="flex items-center gap-space-xs"><button aria-label="묵상 오디오 전환" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:text-primary transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">graphic_eq</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center flex-shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-16 pb-24 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Sacred Top Illuminative Banner & Introduction -->
+<section class="px-margin pt-space-md pb-space-lg flex flex-col gap-space-md relative overflow-hidden">
+<!-- Ambient background illumination aura -->
+<div class="absolute -top-12 left-1/2 -translate-x-1/2 w-72 h-72 bg-primary-fixed/20 rounded-full blur-3xl pointer-events-none -z-10"></div>
+<div class="flex items-center justify-between">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-md text-label-md">
+<span class="material-symbols-outlined text-[14px]">auto_awesome</span>
+        개혁주의 구원론 · SOTERIOLOGY
+      </span>
+<span class="font-label-md text-label-md text-primary tracking-widest font-semibold">
+        ROMANS 8:29-30
+      </span>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex items-baseline gap-2">
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">
+          은혜의 황금 사슬
+        </h1>
+<span class="font-headline-sm text-headline-sm text-primary italic font-serif opacity-80">Catena Aurea</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">영원 전 하나님의 작정과 택하심에서 시작되어, 시공간 속에서 역사하시고 영원한 영광에 이르는 구원의 9단계 여정입니다.</p>
+</div>
+<!-- Illuminated Scripture Parchment Card -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-2 relative">
+<div class="flex items-center justify-between text-primary">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px]">menu_book</span>
+<span class="font-label-md text-label-md font-bold tracking-wider uppercase">기초 핵심 말씀</span>
+</div>
+<button class="flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container-low text-on-surface-variant hover:text-primary transition-colors text-label-md font-label-md" id="copyMainVerseBtn" title="말씀 복사하기" type="button">
+<span class="material-symbols-outlined text-[14px]">content_copy</span>
+<span id="copyFeedback">복사</span>
+</button>
+</div>
+<div class="pl-3 border-l-2 border-primary-container">
+<p class="font-scripture-quote text-scripture-quote text-on-surface leading-loose italic">
+          “또 미리 정하신 그들을 또한 <strong class="text-primary font-semibold">부르시고</strong> 부르신 그들을 또한 <strong class="text-primary font-semibold">의롭다</strong> 하시고 의롭다 하신 그들을 또한 <strong class="text-primary font-semibold">영화롭게</strong> 하셨느니라”
+        </p>
+<span class="block mt-1 font-label-md text-label-md text-on-surface-variant text-right">
+          — 로마서 8장 30절 (Rom 8:30)
+        </span>
+</div>
+</div>
+<!-- Golden Foundation: Unio Cum Christo Banner -->
+<div class="p-3.5 rounded-xl bg-surface-container-high/60 flex items-start gap-3">
+<div class="w-8 h-8 rounded-full bg-primary-fixed flex items-center justify-center text-on-primary-fixed flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">all_inclusive</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5 flex-wrap">
+<span class="font-headline-sm text-headline-sm text-on-surface text-[14px]">그리스도와의 연합</span>
+<span class="font-label-md text-label-md text-primary font-serif">Unio cum Christo</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5 leading-snug">
+          구원의 서정 각 단계는 분리된 계단이 아니며, 성령을 통해 <strong class="text-on-surface">그리스도와 연합</strong>됨으로써 성도에게 차례로 베풀어지는 통전적 은혜의 선물입니다.
+        </p>
+</div>
+</div>
+</section>
+<!-- Interactive Filter Bar & Visual Progress -->
+<section class="sticky top-16 z-40 bg-surface/95 backdrop-blur-md px-margin py-2.5 flex flex-col gap-2">
+<div class="flex items-center justify-between text-on-surface">
+<div class="flex items-center gap-2">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">여정 탐색</span>
+<span class="px-2 py-0.5 rounded-full bg-primary/10 text-primary font-label-md text-label-md">현재: 1단계 묵상중</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface-variant">총 9단계</span>
+</div>
+<!-- Filter Pills -->
+<div class="flex items-center gap-1.5 overflow-x-auto no-scrollbar pb-0.5"><button class="filter-pill px-3 py-1.5 rounded-full bg-primary text-on-primary font-label-md text-label-md whitespace-nowrap transition-all shadow-sm" data-filter="all" type="button">
+        전체 9단계
+      </button>
+<button class="filter-pill px-3 py-1.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-md text-label-md whitespace-nowrap hover:bg-surface-container-highest transition-all" data-filter="stage-origin" type="button">
+        시작과 택함 (1~3)
+      </button>
+<button class="filter-pill px-3 py-1.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-md text-label-md whitespace-nowrap hover:bg-surface-container-highest transition-all" data-filter="stage-status" type="button">
+        은혜와 신분 (4~6)
+      </button>
+<button class="filter-pill px-3 py-1.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-md text-label-md whitespace-nowrap hover:bg-surface-container-highest transition-all" data-filter="stage-consummation" type="button">
+        성화와 완성 (7~9)
+      </button></div>
+</section>
+<!-- Timeline Stream Container -->
+<section class="px-margin py-space-md flex flex-col relative"><div class="absolute left-[33px] top-6 bottom-8 w-[2px] bg-gradient-to-b from-primary via-secondary to-primary-container opacity-40 pointer-events-none"></div>
+<!-- STAGE 1: 예정 (Praedestinatio) -->
+<div class="stage-card relative flex items-start gap-3.5 mb-space-lg group" data-category="stage-origin">
+<div class="flex flex-col items-center flex-shrink-0 z-10">
+<div class="w-9 h-9 rounded-full bg-primary text-on-primary flex items-center justify-center font-headline-sm text-headline-sm shadow-md ring-4 ring-primary-fixed/40">
+<span>I</span>
+</div>
+<span class="mt-1 font-label-md text-label-md text-primary font-bold">01</span>
+</div>
+<div class="flex-1 p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-2.5 transition-all">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5 flex-wrap">
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-md text-label-md font-bold tracking-wider">
+              ORDO 01 · PRAEDESTINATIO
+            </span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-md text-label-md">
+              묵상중
+            </span>
+</div>
+<button class="accordion-toggle w-7 h-7 rounded-full bg-surface-container-low flex items-center justify-center text-on-surface-variant hover:text-on-surface" type="button">
+<span class="material-symbols-outlined text-[18px] transition-transform duration-200">expand_more</span>
+</button>
+</div>
+<div class="flex flex-col">
+<h2 class="font-headline-md text-headline-md text-on-surface">
+            예정 <span class="text-on-surface-variant font-label-lg font-serif">(Predestination / 영원한 선택)</span>
+</h2>
+<p class="font-body-md text-body-md text-on-surface mt-1">
+            창세 전에 하나님께서 그의 주권적 은혜와 기쁘신 뜻을 따라 그리스도 안에서 구원받을 자들을 거저 택하신 영원한 작정입니다.
+          </p>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container-low flex flex-col gap-1">
+<div class="flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-[15px]">format_quote</span>
+<span class="font-label-md text-label-md font-semibold">대표 성구</span>
+</div>
+<p class="font-scripture-quote text-body-md text-on-surface leading-snug italic">
+            “곧 창세 전에 그리스도 안에서 우리를 택하사 우리로 사랑 안에서 그 앞에 거룩하고 흠이 없게 하시려고 그 기쁘신 뜻대로 우리를 예정하사...”
+          </p>
+<span class="font-label-md text-label-md text-on-surface-variant text-right">에베소서 1:4-5</span>
+</div>
+<div class="accordion-content hidden flex-col gap-2 pt-2 bg-surface-container-lowest">
+<div class="p-2.5 rounded-lg bg-surface-container-high/40 flex flex-col gap-1 text-body-sm text-on-surface-variant">
+<span class="font-label-md text-label-md text-on-surface font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-primary">school</span>
+              무조건적 선택 (Unconditional Election)
+            </span>
+<p>
+              구원은 인간의 예견된 공로나 믿음의 조건을 보신 것이 아니며, 오직 삼위 하나님의 주권적인 사랑과 은혜의 작정에 기원합니다.
+            </p>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-md text-label-md text-primary font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">verified</span> 영원한 작정과 은혜의 선택
+          </span>
+<button class="note-open-btn px-2.5 py-1 rounded-lg bg-surface-container-high text-on-surface font-label-md text-label-md flex items-center gap-1 hover:bg-primary hover:text-on-primary transition-colors" type="button">
+<span class="material-symbols-outlined text-[14px]">edit_note</span> 묵상 기록
+          </button>
+</div>
+</div>
+</div>
+<!-- STAGE 2: 소명 (Vocatio) -->
+<div class="stage-card relative flex items-start gap-3.5 mb-space-lg group" data-category="stage-origin">
+<div class="flex flex-col items-center flex-shrink-0 z-10">
+<div class="w-9 h-9 rounded-full bg-surface-container-lowest text-primary flex items-center justify-center font-headline-sm text-headline-sm shadow-md ring-2 ring-primary/30">
+<span>II</span>
+</div>
+<span class="mt-1 font-label-md text-label-md text-on-surface-variant font-bold">02</span>
+</div>
+<div class="flex-1 p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-2.5">
+<div class="flex items-center justify-between">
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-md text-label-md font-bold tracking-wider">
+            ORDO 02 · VOCATIO
+          </span>
+<button class="accordion-toggle w-7 h-7 rounded-full bg-surface-container-low flex items-center justify-center text-on-surface-variant hover:text-on-surface" type="button">
+<span class="material-symbols-outlined text-[18px] transition-transform duration-200">expand_more</span>
+</button>
+</div>
+<div class="flex flex-col">
+<h2 class="font-headline-md text-headline-md text-on-surface">
+            소명 <span class="text-on-surface-variant font-label-lg font-serif">(Calling / 부르심)</span>
+</h2>
+<p class="font-body-md text-body-md text-on-surface mt-1">
+            복음의 선포를 통해 성령 하나님께서 죄인을 구원으로 부르시는 거룩한 영적 초청입니다.
+          </p>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container-low flex flex-col gap-1">
+<div class="flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-[15px]">format_quote</span>
+<span class="font-label-md text-label-md font-semibold">대표 성구</span>
+</div>
+<p class="font-scripture-quote text-body-md text-on-surface leading-snug italic">
+            “너희를 불러 그의 아들 예수 그리스도 우리 주와 더불어 교제하게 하시는 하나님은 미쁘시도다”
+          </p>
+<span class="font-label-md text-label-md text-on-surface-variant text-right">고린도전서 1:9</span>
+</div>
+<div class="accordion-content hidden flex-col gap-2 pt-2 bg-surface-container-lowest">
+<div class="p-2.5 rounded-lg bg-surface-container-high/40 flex flex-col gap-1 text-body-sm text-on-surface-variant">
+<span class="font-label-md text-label-md text-on-surface font-semibold">신학적 구분 (Reformed Theology)</span>
+<p>
+              외적 부르심(External Call)과 택함 받은 자의 굳은 마음을 녹여 그리스도께 나아오게 하는 유효적 부르심(Vocatio Efficax)으로 구분됩니다.
+            </p>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-md text-label-md text-on-surface-variant font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check_circle</span> 단회적 사역
+          </span>
+<button class="note-open-btn px-2.5 py-1 rounded-lg bg-surface-container-high text-on-surface font-label-md text-label-md flex items-center gap-1 hover:bg-primary hover:text-on-primary transition-colors" type="button">
+<span class="material-symbols-outlined text-[14px]">edit_note</span> 묵상 기록
+          </button>
+</div>
+</div>
+</div>
+<!-- STAGE 3: 중생 (Regeneratio) -->
+<div class="stage-card relative flex items-start gap-3.5 mb-space-lg group" data-category="stage-origin">
+<div class="flex flex-col items-center flex-shrink-0 z-10">
+<div class="w-9 h-9 rounded-full bg-surface-container-lowest text-primary flex items-center justify-center font-headline-sm text-headline-sm shadow-md ring-2 ring-primary/30">
+<span>III</span>
+</div>
+<span class="mt-1 font-label-md text-label-md text-on-surface-variant font-bold">03</span>
+</div>
+<div class="flex-1 p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-2.5">
+<div class="flex items-center justify-between">
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-md text-label-md font-bold tracking-wider">
+            ORDO 03 · REGENERATIO
+          </span>
+<button class="accordion-toggle w-7 h-7 rounded-full bg-surface-container-low flex items-center justify-center text-on-surface-variant hover:text-on-surface" type="button">
+<span class="material-symbols-outlined text-[18px] transition-transform duration-200">expand_more</span>
+</button>
+</div>
+<div class="flex flex-col">
+<h2 class="font-headline-md text-headline-md text-on-surface">
+            중생 <span class="text-on-surface-variant font-label-lg font-serif">(Regeneration / 거듭남)</span>
+</h2>
+<p class="font-body-md text-body-md text-on-surface mt-1">
+            성령의 초자연적인 역사로 영적으로 죽었던 죄인의 영혼에 새로운 생명의 원리를 불어넣으시는 주권적 역사입니다.
+          </p>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container-low flex flex-col gap-1">
+<div class="flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-[15px]">format_quote</span>
+<span class="font-label-md text-label-md font-semibold">대표 성구</span>
+</div>
+<p class="font-scripture-quote text-body-md text-on-surface leading-snug italic">
+            “진실로 진실로 네게 이르노니 사람이 거듭나지 아니하면 하나님의 나라를 볼 수 없느니라”
+          </p>
+<span class="font-label-md text-label-md text-on-surface-variant text-right">요한복음 3:3</span>
+</div>
+<div class="accordion-content hidden flex-col gap-2 pt-2 bg-surface-container-lowest">
+<div class="p-2.5 rounded-lg bg-surface-container-high/40 flex flex-col gap-1 text-body-sm text-on-surface-variant">
+<span class="font-label-md text-label-md text-on-surface font-semibold">신학 핵심 (Monergism)</span>
+<p>
+              인간의 협력이 개입될 수 없는 성령의 단독적 사역(Monergism)으로, 주께서 먼저 심령을 살리사 반응하게 하십니다.
+            </p>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-md text-label-md text-on-surface-variant font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">spa</span> 새 영과 새 마음
+          </span>
+<button class="note-open-btn px-2.5 py-1 rounded-lg bg-surface-container-high text-on-surface font-label-md text-label-md flex items-center gap-1 hover:bg-primary hover:text-on-primary transition-colors" type="button">
+<span class="material-symbols-outlined text-[14px]">edit_note</span> 묵상 기록
+          </button>
+</div>
+</div>
+</div>
+<!-- STAGE 4: 회심 (Conversio) -->
+<div class="stage-card relative flex items-start gap-3.5 mb-space-lg group" data-category="stage-status">
+<div class="flex flex-col items-center flex-shrink-0 z-10">
+<div class="w-9 h-9 rounded-full bg-surface-container-lowest text-primary flex items-center justify-center font-headline-sm text-headline-sm shadow-md ring-2 ring-primary/30">
+<span>IV</span>
+</div>
+<span class="mt-1 font-label-md text-label-md text-on-surface-variant font-bold">04</span>
+</div>
+<div class="flex-1 p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-2.5">
+<div class="flex items-center justify-between">
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-md text-label-md font-bold tracking-wider">
+            ORDO 04 · CONVERSIO
+          </span>
+<button class="accordion-toggle w-7 h-7 rounded-full bg-surface-container-low flex items-center justify-center text-on-surface-variant hover:text-on-surface" type="button">
+<span class="material-symbols-outlined text-[18px] transition-transform duration-200">expand_more</span>
+</button>
+</div>
+<div class="flex flex-col">
+<h2 class="font-headline-md text-headline-md text-on-surface">
+            회심 <span class="text-on-surface-variant font-label-lg font-serif">(Conversion / 회개와 믿음)</span>
+</h2>
+<p class="font-body-md text-body-md text-on-surface mt-1">
+            중생의 열매로서 죄를 뉘우쳐 하나님께로 돌이키고(회개), 오직 그리스도만을 온전히 신뢰하고 영접함(믿음)입니다.
+          </p>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container-low flex flex-col gap-1">
+<div class="flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-[15px]">format_quote</span>
+<span class="font-label-md text-label-md font-semibold">대표 성구</span>
+</div>
+<p class="font-scripture-quote text-body-md text-on-surface leading-snug italic">
+            “때가 찼고 하나님의 나라가 가까이 왔으니 회개하고 복음을 믿으라 하시더라”
+          </p>
+<span class="font-label-md text-label-md text-on-surface-variant text-right">마가복음 1:15</span>
+</div>
+<div class="accordion-content hidden flex-col gap-2 pt-2 bg-surface-container-lowest">
+<div class="p-2.5 rounded-lg bg-surface-container-high/40 flex flex-col gap-1 text-body-sm text-on-surface-variant">
+<span class="font-label-md text-label-md text-on-surface font-semibold">신학 구조 (Metanoia &amp; Fides)</span>
+<p>
+              회개(Metanoia)는 전 인격적 방향 전환이며, 믿음(Fides Salvifica)은 구주 예수를 영접하는 구원의 선물입니다.
+            </p>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-md text-label-md text-on-surface-variant font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">cached</span> 전 인격적 방향 전환
+          </span>
+<button class="note-open-btn px-2.5 py-1 rounded-lg bg-surface-container-high text-on-surface font-label-md text-label-md flex items-center gap-1 hover:bg-primary hover:text-on-primary transition-colors" type="button">
+<span class="material-symbols-outlined text-[14px]">edit_note</span> 묵상 기록
+          </button>
+</div>
+</div>
+</div>
+<!-- STAGE 5: 칭의 (Justificatio) -->
+<div class="stage-card relative flex items-start gap-3.5 mb-space-lg group" data-category="stage-status">
+<div class="flex flex-col items-center flex-shrink-0 z-10">
+<div class="w-9 h-9 rounded-full bg-surface-container-lowest text-primary flex items-center justify-center font-headline-sm text-headline-sm shadow-md ring-2 ring-primary/30">
+<span>V</span>
+</div>
+<span class="mt-1 font-label-md text-label-md text-on-surface-variant font-bold">05</span>
+</div>
+<div class="flex-1 p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-2.5">
+<div class="flex items-center justify-between">
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed/60 text-on-primary-fixed font-label-md text-label-md font-bold tracking-wider">
+            ORDO 05 · JUSTIFICATIO
+          </span>
+<button class="accordion-toggle w-7 h-7 rounded-full bg-surface-container-low flex items-center justify-center text-on-surface-variant hover:text-on-surface" type="button">
+<span class="material-symbols-outlined text-[18px] transition-transform duration-200">expand_more</span>
+</button>
+</div>
+<div class="flex flex-col">
+<h2 class="font-headline-md text-headline-md text-on-surface">
+            칭의 <span class="text-on-surface-variant font-label-lg font-serif">(Justification / 의롭다 하심)</span>
+</h2>
+<p class="font-body-md text-body-md text-on-surface mt-1">
+            그리스도의 완전한 의가 우리에게 전가(Imputation)되어, 법정적으로 모든 죄의 형벌이 사해지고 의인으로 선언받음입니다.
+          </p>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container-low flex flex-col gap-1">
+<div class="flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-[15px]">format_quote</span>
+<span class="font-label-md text-label-md font-semibold">대표 성구</span>
+</div>
+<p class="font-scripture-quote text-body-md text-on-surface leading-snug italic">
+            “그러므로 우리가 믿음으로 의롭다 하심을 받았으니 우리 주 예수 그리스도로 말미암아 하나님과 화평을 누리자”
+          </p>
+<span class="font-label-md text-label-md text-on-surface-variant text-right">로마서 5:1</span>
+</div>
+<div class="accordion-content hidden flex-col gap-2 pt-2 bg-surface-container-lowest">
+<div class="p-2.5 rounded-lg bg-surface-container-high/40 flex flex-col gap-1 text-body-sm text-on-surface-variant">
+<span class="font-label-md text-label-md text-on-surface font-semibold">법정적 선언 (Forensic Declaration)</span>
+<p>
+              칭의는 하나님의 법정적 무죄 및 의인 선언이며, 오직 은혜로 믿음으로 말미암아(Sola Fide) 성립됩니다.
+            </p>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-md text-label-md text-on-surface-variant font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">balance</span> 법정적 의의 전가
+          </span>
+<button class="note-open-btn px-2.5 py-1 rounded-lg bg-surface-container-high text-on-surface font-label-md text-label-md flex items-center gap-1 hover:bg-primary hover:text-on-primary transition-colors" type="button">
+<span class="material-symbols-outlined text-[14px]">edit_note</span> 묵상 기록
+          </button>
+</div>
+</div>
+</div>
+<!-- STAGE 6: 수양 / 양자됨 (Adoptio) -->
+<div class="stage-card relative flex items-start gap-3.5 mb-space-lg group" data-category="stage-status">
+<div class="flex flex-col items-center flex-shrink-0 z-10">
+<div class="w-9 h-9 rounded-full bg-surface-container-lowest text-primary flex items-center justify-center font-headline-sm text-headline-sm shadow-md ring-2 ring-primary/30">
+<span>VI</span>
+</div>
+<span class="mt-1 font-label-md text-label-md text-on-surface-variant font-bold">06</span>
+</div>
+<div class="flex-1 p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-2.5">
+<div class="flex items-center justify-between">
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-md text-label-md font-bold tracking-wider">
+            ORDO 06 · ADOPTIO
+          </span>
+<button class="accordion-toggle w-7 h-7 rounded-full bg-surface-container-low flex items-center justify-center text-on-surface-variant hover:text-on-surface" type="button">
+<span class="material-symbols-outlined text-[18px] transition-transform duration-200">expand_more</span>
+</button>
+</div>
+<div class="flex flex-col">
+<h2 class="font-headline-md text-headline-md text-on-surface">
+            수양 / 양자됨 <span class="text-on-surface-variant font-label-lg font-serif">(Adoption / 자녀 삼으심)</span>
+</h2>
+<p class="font-body-md text-body-md text-on-surface mt-1">
+            하나님의 가족으로 입양되어 하나님 나라의 친자녀이자 합법적인 상속자로서의 거룩한 신분과 특권을 입음입니다.
+          </p>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container-low flex flex-col gap-1">
+<div class="flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-[15px]">format_quote</span>
+<span class="font-label-md text-label-md font-semibold">대표 성구</span>
+</div>
+<p class="font-scripture-quote text-body-md text-on-surface leading-snug italic">
+            “너희는 다시 무서워하는 종의 영을 받지 아니하고 양자의 영을 받았으므로 우리가 아바 아버지라고 부르짖느니라”
+          </p>
+<span class="font-label-md text-label-md text-on-surface-variant text-right">로마서 8:15</span>
+</div>
+<div class="accordion-content hidden flex-col gap-2 pt-2 bg-surface-container-lowest">
+<div class="p-2.5 rounded-lg bg-secondary-container/40 flex flex-col gap-1 text-body-sm text-on-secondary-container">
+<span class="font-label-md text-label-md font-semibold">관계적 은혜의 최고봉</span>
+<p>
+              칭의가 법정의 무죄라면, 양자됨은 아버지의 가정으로 들어가는 친밀한 관계이자 영원한 상속자의 특권입니다.
+            </p>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-md text-label-md text-on-surface-variant font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">family_restroom</span> 아바 아버지와의 친밀함
+          </span>
+<button class="note-open-btn px-2.5 py-1 rounded-lg bg-surface-container-high text-on-surface font-label-md text-label-md flex items-center gap-1 hover:bg-primary hover:text-on-primary transition-colors" type="button">
+<span class="material-symbols-outlined text-[14px]">edit_note</span> 묵상 기록
+          </button>
+</div>
+</div>
+</div>
+<!-- STAGE 7: 성화 (Sanctificatio) -->
+<div class="stage-card relative flex items-start gap-3.5 mb-space-lg group" data-category="stage-consummation">
+<div class="flex flex-col items-center flex-shrink-0 z-10">
+<div class="w-9 h-9 rounded-full bg-surface-container-lowest text-primary flex items-center justify-center font-headline-sm text-headline-sm shadow-md ring-2 ring-primary/30">
+<span>VII</span>
+</div>
+<span class="mt-1 font-label-md text-label-md text-on-surface-variant font-bold">07</span>
+</div>
+<div class="flex-1 p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-2.5">
+<div class="flex items-center justify-between">
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-md text-label-md font-bold tracking-wider">
+            ORDO 07 · SANCTIFICATIO
+          </span>
+<button class="accordion-toggle w-7 h-7 rounded-full bg-surface-container-low flex items-center justify-center text-on-surface-variant hover:text-on-surface" type="button">
+<span class="material-symbols-outlined text-[18px] transition-transform duration-200">expand_more</span>
+</button>
+</div>
+<div class="flex flex-col">
+<h2 class="font-headline-md text-headline-md text-on-surface">
+            성화 <span class="text-on-surface-variant font-label-lg font-serif">(Sanctification / 거룩해짐)</span>
+</h2>
+<p class="font-body-md text-body-md text-on-surface mt-1">
+            일생 동안 성령의 도우심을 힘입어 죄의 본성을 죽이고 그리스도의 온전한 형상을 점점 닮아가는 평생의 과정입니다.
+          </p>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container-low flex flex-col gap-1">
+<div class="flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-[15px]">format_quote</span>
+<span class="font-label-md text-label-md font-semibold">대표 성구</span>
+</div>
+<p class="font-scripture-quote text-body-md text-on-surface leading-snug italic">
+            “나의 사랑하는 자들아... 항상 복종하여 두렵고 떨림으로 너희 구원을 이루라”
+          </p>
+<span class="font-label-md text-label-md text-on-surface-variant text-right">빌립보서 2:12</span>
+</div>
+<div class="accordion-content hidden flex-col gap-2 pt-2 bg-surface-container-lowest">
+<div class="p-2.5 rounded-lg bg-surface-container-high/40 flex flex-col gap-1 text-body-sm text-on-surface-variant">
+<span class="font-label-md text-label-md text-on-surface font-semibold">신인 협동적 과정 (Synergism)</span>
+<p>
+              단회적인 칭의와 달리, 성화는 성령의 은혜에 힘입어 신자 자신도 거룩함을 위해 힘써 순종하는 평생의 점진적 여정입니다.
+            </p>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-md text-label-md text-on-surface-variant font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">hourglass_top</span> 점진적 평생의 성숙
+          </span>
+<button class="note-open-btn px-2.5 py-1 rounded-lg bg-surface-container-high text-on-surface font-label-md text-label-md flex items-center gap-1 hover:bg-primary hover:text-on-primary transition-colors" type="button">
+<span class="material-symbols-outlined text-[14px]">edit_note</span> 묵상 기록
+          </button>
+</div>
+</div>
+</div>
+<!-- STAGE 8: 성도의 견인 (Perseverantia) -->
+<div class="stage-card relative flex items-start gap-3.5 mb-space-lg group" data-category="stage-consummation">
+<div class="flex flex-col items-center flex-shrink-0 z-10">
+<div class="w-9 h-9 rounded-full bg-surface-container-lowest text-primary flex items-center justify-center font-headline-sm text-headline-sm shadow-md ring-2 ring-primary/30">
+<span>VIII</span>
+</div>
+<span class="mt-1 font-label-md text-label-md text-on-surface-variant font-bold">08</span>
+</div>
+<div class="flex-1 p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-2.5">
+<div class="flex items-center justify-between">
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-md text-label-md font-bold tracking-wider">
+            ORDO 08 · PERSEVERANTIA
+          </span>
+<button class="accordion-toggle w-7 h-7 rounded-full bg-surface-container-low flex items-center justify-center text-on-surface-variant hover:text-on-surface" type="button">
+<span class="material-symbols-outlined text-[18px] transition-transform duration-200">expand_more</span>
+</button>
+</div>
+<div class="flex flex-col">
+<h2 class="font-headline-md text-headline-md text-on-surface">
+            성도의 견인 <span class="text-on-surface-variant font-label-lg font-serif">(Perseverance / 끝까지 붙드심)</span>
+</h2>
+<p class="font-body-md text-body-md text-on-surface mt-1">
+            참된 성도는 연약함과 시험 속에서도 하나님의 변함없는 신실하신 손길로 결코 은혜에서 최종 탈락하지 않고 보존됩니다.
+          </p>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container-low flex flex-col gap-1">
+<div class="flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-[15px]">format_quote</span>
+<span class="font-label-md text-label-md font-semibold">대표 성구</span>
+</div>
+<p class="font-scripture-quote text-body-md text-on-surface leading-snug italic">
+            “내가 그들에게 영생을 주노니 영원히 멸망하지 아니할 것이요 또 그들을 내 손에서 빼앗을 자가 없느니라”
+          </p>
+<span class="font-label-md text-label-md text-on-surface-variant text-right">요한복음 10:28</span>
+</div>
+<div class="accordion-content hidden flex-col gap-2 pt-2 bg-surface-container-lowest">
+<div class="p-2.5 rounded-lg bg-surface-container-high/40 flex flex-col gap-1 text-body-sm text-on-surface-variant">
+<span class="font-label-md text-label-md text-on-surface font-semibold">신자의 확신과 위로</span>
+<p>
+              견인은 신자 자신의 의지가 아닌 우리를 붙드시는 하나님의 불변하는 보존하심(Preservation of God)에 근거합니다.
+            </p>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-md text-label-md text-on-surface-variant font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">shield</span> 하나님의 영원한 보증
+          </span>
+<button class="note-open-btn px-2.5 py-1 rounded-lg bg-surface-container-high text-on-surface font-label-md text-label-md flex items-center gap-1 hover:bg-primary hover:text-on-primary transition-colors" type="button">
+<span class="material-symbols-outlined text-[14px]">edit_note</span> 묵상 기록
+          </button>
+</div>
+</div>
+</div>
+<!-- STAGE 9: 영화 (Glorificatio) -->
+<div class="stage-card relative flex items-start gap-3.5 group" data-category="stage-consummation">
+<div class="flex flex-col items-center flex-shrink-0 z-10">
+<div class="w-9 h-9 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center font-headline-sm text-headline-sm shadow-md ring-4 ring-primary-fixed/50">
+<span>IX</span>
+</div>
+<span class="mt-1 font-label-md text-label-md text-primary font-bold">09</span>
+</div>
+<div class="flex-1 p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-2.5">
+<div class="flex items-center justify-between">
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-md text-label-md font-bold tracking-wider">
+            ORDO 09 · GLORIFICATIO
+          </span>
+<button class="accordion-toggle w-7 h-7 rounded-full bg-surface-container-low flex items-center justify-center text-on-surface-variant hover:text-on-surface" type="button">
+<span class="material-symbols-outlined text-[18px] transition-transform duration-200">expand_more</span>
+</button>
+</div>
+<div class="flex flex-col">
+<h2 class="font-headline-md text-headline-md text-on-surface">
+            영화 <span class="text-on-surface-variant font-label-lg font-serif">(Glorification / 영광에 이름)</span>
+</h2>
+<p class="font-body-md text-body-md text-on-surface mt-1">
+            그리스도의 재림 시 부활하여 영과 육이 흠 없는 온전한 영광의 형상으로 변화되어 영원한 안식에 들어가는 완성입니다.
+          </p>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container-low flex flex-col gap-1">
+<div class="flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-[15px]">format_quote</span>
+<span class="font-label-md text-label-md font-semibold">대표 성구</span>
+</div>
+<p class="font-scripture-quote text-body-md text-on-surface leading-snug italic">
+            “나팔 소리가 나매 죽은 자들이 썩지 아니할 것으로 다시 살아나고 우리도 변화되리라”
+          </p>
+<span class="font-label-md text-label-md text-on-surface-variant text-right">고린도전서 15:52</span>
+</div>
+<div class="accordion-content hidden flex-col gap-2 pt-2 bg-surface-container-lowest">
+<div class="p-2.5 rounded-lg bg-surface-container-high/40 flex flex-col gap-1 text-body-sm text-on-surface-variant">
+<span class="font-label-md text-label-md text-on-surface font-semibold">구원의 궁극적 완성 (Consummatio)</span>
+<p>
+              죄와 사망, 눈물과 고통이 완전히 소멸하고 하나님을 얼굴과 얼굴로 대면하여 보며 영원토록 찬양하게 되는 구원의 정점입니다.
+            </p>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-md text-label-md text-primary font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">stars</span> 영원한 부활의 영광
+          </span>
+<button class="note-open-btn px-2.5 py-1 rounded-lg bg-surface-container-high text-on-surface font-label-md text-label-md flex items-center gap-1 hover:bg-primary hover:text-on-primary transition-colors" type="button">
+<span class="material-symbols-outlined text-[14px]">edit_note</span> 묵상 기록
+          </button>
+</div>
+</div>
+</div></section>
+<!-- Contemplative Action & Summary Footer Card -->
+<section class="px-margin pt-space-sm pb-space-xl flex flex-col gap-3">
+<!-- Visual Thematic Scripture Card with Illustration placeholder -->
+<div class="relative rounded-xl overflow-hidden bg-surface-container-lowest shadow-sm p-space-md flex flex-col gap-3">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-lg bg-primary-fixed flex items-center justify-center text-primary flex-shrink-0">
+<span class="material-symbols-outlined text-[28px]">church</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-primary font-bold">SOLI DEO GLORIA</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">오직 하나님께만 영광을</h3>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+        처음의 계획하심부터 마지막 영화에 이르기까지 구원의 모든 단계는 오직 주의 은혜의 풍성함만을 찬송하게 합니다.
+      </p>
+<div class="flex flex-col gap-2 mt-1">
+<button class="w-full py-3 px-4 rounded-lg bg-primary text-on-primary font-label-lg text-label-lg tracking-wider flex items-center justify-center gap-2 shadow-sm hover:opacity-95 transition-opacity" id="shareSummaryBtn" type="button">
+<span class="material-symbols-outlined text-[20px]">share</span>
+          구원의 서정 요약표 공유 및 복사
+        </button>
+<button class="w-full py-2.5 px-4 rounded-lg bg-surface-container-high text-on-surface font-label-md text-label-md flex items-center justify-center gap-1.5 hover:bg-surface-container-highest transition-colors" id="openAllNotesBtn" type="button">
+<span class="material-symbols-outlined text-[18px]">menu_book</span>
+          오늘의 묵상 전체 정리노트 보기
+        </button>
+</div>
+</div>
+</section>
+<!-- Interactive Quick Note Dialog Sheet (Modal) -->
+<div class="fixed inset-0 z-50 bg-inverse-surface/40 backdrop-blur-sm hidden items-end justify-center p-0 transition-opacity" id="noteModal">
+<div class="w-full max-w-lg bg-surface-container-lowest rounded-t-2xl p-margin flex flex-col gap-space-md shadow-xl max-h-[751px] overflow-y-auto">
+<div class="flex items-center justify-between border-b pb-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">stylus_note</span>
+<span class="font-headline-sm text-headline-sm text-on-surface" id="modalStageTitle">단계 묵상 작성</span>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant" id="closeNoteModalBtn" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface-variant" for="meditationInput">
+          말씀 앞에서 깨달은 은혜와 감사 기도를 남겨보세요
+        </label>
+<textarea class="w-full p-3 rounded-lg bg-surface-container-low text-on-surface placeholder:text-on-surface-variant/60 font-body-md text-body-md focus:outline-none focus:bg-surface-container" id="meditationInput" placeholder="하나님의 부르심과 자녀 삼으심에 대해 내 영혼이 고백하는 기도..." rows="4"></textarea>
+</div>
+<div class="flex items-center justify-end gap-2 pt-1">
+<button class="px-4 py-2 rounded-lg bg-surface-container text-on-surface-variant font-label-md text-label-md" id="cancelNoteBtn" type="button">
+          닫기
+        </button>
+<button class="px-5 py-2 rounded-lg bg-primary text-on-primary font-label-md text-label-md flex items-center gap-1.5 shadow-sm" id="saveNoteBtn" type="button">
+<span class="material-symbols-outlined text-[16px]">bookmark_added</span>
+          묵상 저장하기
+        </button>
+</div>
+</div>
+</div>
+<!-- Toast Notification -->
+<div class="fixed bottom-20 left-1/2 -translate-x-1/2 z-50 px-4 py-2.5 rounded-full bg-on-surface text-surface font-label-md text-label-md flex items-center gap-2 shadow-lg opacity-0 pointer-events-none transition-all duration-300" id="toastNotification">
+<span class="material-symbols-outlined text-[18px] text-primary-fixed">verified</span>
+<span id="toastMessage">클립보드에 복사되었습니다.</span>
+</div>
+</div>
+<script>
+  (function initOrdoSalutis() {
+    // 1. Accordion Toggle
+    document.querySelectorAll('.accordion-toggle').forEach(button => {
+      button.addEventListener('click', (e) => {
+        const card = button.closest('.stage-card');
+        const accordionContent = card.querySelector('.accordion-content');
+        const icon = button.querySelector('.material-symbols-outlined');
+        
+        if (accordionContent.classList.contains('hidden')) {
+          accordionContent.classList.remove('hidden');
+          accordionContent.classList.add('flex');
+          icon.style.transform = 'rotate(180deg)';
+        } else {
+          accordionContent.classList.add('hidden');
+          accordionContent.classList.remove('flex');
+          icon.style.transform = 'rotate(0deg)';
+        }
+      });
+    });
+
+    // 2. Timeline Category Filter
+    const filterPills = document.querySelectorAll('.filter-pill');
+    const stageCards = document.querySelectorAll('.stage-card');
+
+    filterPills.forEach(pill => {
+      pill.addEventListener('click', () => {
+        // Toggle Active Styling
+        filterPills.forEach(p => {
+          p.classList.remove('bg-primary', 'text-on-primary', 'shadow-sm');
+          p.classList.add('bg-surface-container-high', 'text-on-surface-variant');
+        });
+        pill.classList.remove('bg-surface-container-high', 'text-on-surface-variant');
+        pill.classList.add('bg-primary', 'text-on-primary', 'shadow-sm');
+
+        const filter = pill.getAttribute('data-filter');
+        stageCards.forEach(card => {
+          if (filter === 'all' || card.getAttribute('data-category') === filter) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // 3. Toast Helper
+    const toast = document.getElementById('toastNotification');
+    const toastMsg = document.getElementById('toastMessage');
+    function showToast(text) {
+      toastMsg.innerText = text;
+      toast.classList.remove('opacity-0', 'pointer-events-none');
+      toast.classList.add('opacity-100');
+      setTimeout(() => {
+        toast.classList.remove('opacity-100');
+        toast.classList.add('opacity-0', 'pointer-events-none');
+      }, 2400);
+    }
+
+    // 4. Scripture Copy
+    const copyBtn = document.getElementById('copyMainVerseBtn');
+    copyBtn.addEventListener('click', () => {
+      const verseText = '“또 미리 정하신 그들을 또한 부르시고 부르신 그들을 또한 의롭다 하시고 의롭다 하신 그들을 또한 영화롭게 하셨느니라” (로마서 8:30)';
+      navigator.clipboard.writeText(verseText).then(() => {
+        showToast('로마서 8:30 말씀이 복사되었습니다.');
+      }).catch(() => {
+        showToast('성구 복사에 성공했습니다.');
+      });
+    });
+
+    // 5. Share Summary Button
+    const shareBtn = document.getElementById('shareSummaryBtn');
+    shareBtn.addEventListener('click', () => {
+      const summary = `[구원의 서정 8단계 (Ordo Salutis)]\n1. 소명(Vocatio)\n2. 중생(Regeneratio)\n3. 회심(Conversio)\n4. 칭의(Justificatio)\n5. 양자됨(Adoptio)\n6. 성화(Sanctificatio)\n7. 성도의 견인(Perseverantia)\n8. 영화(Glorificatio)\n\n"부르신 그들을 또한 의롭다 하시고 영화롭게 하셨느니라 (롬 8:30)"`;
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(summary).then(() => {
+          showToast('구원의 서정 요약표가 복사되었습니다.');
+        });
+      } else {
+        showToast('구원의 서정 8단계를 묵상합니다.');
+      }
+    });
+
+    // 6. Note Modal Micro-interaction
+    const modal = document.getElementById('noteModal');
+    const modalTitle = document.getElementById('modalStageTitle');
+    const closeBtn = document.getElementById('closeNoteModalBtn');
+    const cancelBtn = document.getElementById('cancelNoteBtn');
+    const saveBtn = document.getElementById('saveNoteBtn');
+    const noteInput = document.getElementById('meditationInput');
+
+    document.querySelectorAll('.note-open-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const stageHeading = btn.closest('.stage-card').querySelector('h2').innerText;
+        modalTitle.innerText = `${stageHeading} 묵상 기록`;
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+        noteInput.focus();
+      });
+    });
+
+    function closeModal() {
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
+    closeBtn.addEventListener('click', closeModal);
+    cancelBtn.addEventListener('click', closeModal);
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) closeModal();
+    });
+
+    saveBtn.addEventListener('click', () => {
+      if (noteInput.value.trim().length > 0) {
+        showToast('묵상 노트가 은혜롭게 저장되었습니다.');
+        noteInput.value = '';
+        closeModal();
+      } else {
+        showToast('묵상 내용을 한 줄 이상 입력해주세요.');
+      }
+    });
+
+    document.getElementById('openAllNotesBtn').addEventListener('click', () => {
+      modalTitle.innerText = '오늘의 구원 은혜 총괄 묵상';
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    });
+  })();
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(30,35,42,0.04)]" data-active-classes="text-primary font-semibold"><div class="flex justify-around items-center h-16 px-space-xs"><a class="flex flex-col items-center justify-center w-full h-full min-h-[44px] gap-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="timeline" href="#"><span class="material-symbols-outlined text-[22px]">timeline</span><span class="font-label-md text-label-md tracking-normal">여정 타임라인</span></a><a class="flex flex-col items-center justify-center w-full h-full min-h-[44px] gap-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="scripture" href="#"><span class="material-symbols-outlined text-[22px]">auto_stories</span><span class="font-label-md text-label-md tracking-normal">성구 묵상</span></a><a class="flex flex-col items-center justify-center w-full h-full min-h-[44px] gap-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="theology" href="#"><span class="material-symbols-outlined text-[22px]">menu_book</span><span class="font-label-md text-label-md tracking-normal">신학 해설</span></a><a class="flex flex-col items-center justify-center w-full h-full min-h-[44px] gap-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="my-notes" href="#"><span class="material-symbols-outlined text-[22px]">edit_note</span><span class="font-label-md text-label-md tracking-normal">나의 묵상노트</span></a></div></nav></body></html>
